@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="nunit.framework" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
@@ -50,6 +51,9 @@
     </None>
     <None Include="bin\Debug\File1.txt" />
     <None Include="bin\Debug\Errors.txt" />
+    <None Include="bin\Debug\File2.txt" />
+    <None Include="bin\Debug\File3.txt" />
+    <None Include="bin\Debug\Platforms_1.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

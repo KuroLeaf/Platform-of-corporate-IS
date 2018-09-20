@@ -28,7 +28,7 @@
 
             this.WriteArrayListContactsInFile("File1.txt", list);
         }
-
+         
         /// <summary>
         /// Perform second task.
         /// </summary>
@@ -58,7 +58,7 @@
         /// <returns>
         /// Read from file info about several contacts and contains it in ArrayList collection.
         /// </returns>
-        private ArrayList ReadFile(string path)
+        public ArrayList ReadFile(string path)
         {
             if (!path.EndsWith(".txt"))
             {
@@ -67,7 +67,7 @@
 
             string[] lines = File.ReadAllLines(path);
             ArrayList contactsList = new ArrayList();
-
+          
             for (int i = 0; i < lines.Length; i++)
             {
                 if (lines[i].Trim().ToLower() == "phone")
@@ -90,6 +90,7 @@
                 {
                     throw new Exception($"Unknown contact! Check info in file '{path}'");
                 }
+
             }
 
             return contactsList;
@@ -100,7 +101,7 @@
         /// </summary>
         /// <param name="path"> Path for file writing.</param>
         /// <param name="arrayList"> List of contacts to write.</param>
-        private void WriteArrayListContactsInFile(string path, ArrayList arrayList)
+        public void WriteArrayListContactsInFile(string path, ArrayList arrayList)
         {
             if (!path.EndsWith(".txt"))
             {
@@ -123,7 +124,7 @@
         /// <returns>
         /// Return new container pairs (Dictionary): : name - phone number + mail + skype.
         /// </returns>
-        private Dictionary<string, List<string>> GroupArrayListContacts(ArrayList list)
+        public Dictionary<string, List<string>> GroupArrayListContacts(ArrayList list)
         {
             var groupList = from Contact l in list
                             group l by (l as Contact).Name;
@@ -159,14 +160,14 @@
         /// </summary>
         /// <param name="path"> Path for file writing.</param>
         /// <param name="pairs"> Pairs collection: name - phone number + mail + skype.</param>
-        private void WriteContactsDictionaryInFIle(string path, Dictionary<string, List<string>> pairs)
+        public  void WriteContactsDictionaryInFIle(string path, Dictionary<string, List<string>> pairs)
         {
             if (!path.EndsWith(".txt"))
             {
                 throw new Exception("Unknown text file format!");
             }
 
-            using (StreamWriter sw = new StreamWriter("File2.txt", false, System.Text.Encoding.Default))
+            using (StreamWriter sw = new StreamWriter(path, false, System.Text.Encoding.Default))
             {
                 foreach (KeyValuePair<string, List<string>> keyValye in pairs)
                 {
@@ -188,7 +189,7 @@
         /// <returns>
         /// Returns list of names of users who has only phone contact.
         /// </returns>
-        private List<string> UsersWithOnlyPhones(ArrayList list)
+        public  List<string> UsersWithOnlyPhones(ArrayList list)
         {
             List<string> namesOnlyWithPhones = (from Contact l in list
                                                 group l by (l as Contact).Name into g
@@ -205,7 +206,7 @@
         /// </summary>
         /// <param name="path"> Path for file writing.</param>
         /// <param name="list"> List of strings.</param>
-        private void WriteListInFile(string path, List<string> list)
+        public  void WriteListInFile(string path, List<string> list)
         {
             if (!path.EndsWith(".txt"))
             {

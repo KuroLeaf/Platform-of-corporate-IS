@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -54,6 +54,9 @@
     <None Include="bin\Debug\File2.txt" />
     <None Include="bin\Debug\File3.txt" />
     <None Include="bin\Debug\Platforms_1.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\RT.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

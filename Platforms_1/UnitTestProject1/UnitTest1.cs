@@ -171,6 +171,17 @@ namespace UnitTestProject
             names1 = user.UsersWithOnlyPhones(list1);
             Assert.AreEqual(3, names1.Count);
         }
+        [TestMethod]
+        public void WriteListTest()
+        {
+            Platforms_1.Task user = new Platforms_1.Task();
+            ArrayList list1 = user.ReadFile("RT.txt");
+            List<string> names1 = new List<string>();
+            names1 = user.UsersWithOnlyPhones(list1);
+            user.WriteListInFile("LT.txt", names1);
+            string[] arr = File.ReadAllLines("LT.txt");
+            Assert.AreEqual(arr[2], names1[2]);
 
+        }
     }
 }

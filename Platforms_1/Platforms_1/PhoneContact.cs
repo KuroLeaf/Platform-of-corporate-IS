@@ -35,7 +35,7 @@
 
             if (info.Length != 2)
             {
-                throw new Exception("Incorrect input data!");
+                throw new ExceptionsLogger("Incorrect input data!");
             }
 
             this.Name = info[0].Trim();
@@ -71,13 +71,13 @@
             {
                 if (value.Length != 5)
                 {
-                    throw new Exception("Incorrect input phone number! Amount of numbers have to be 5!");
+                    throw new ExceptionsLogger("Incorrect input phone number! Amount of numbers have to be 5!");
                 }
 
                 Int32 phoneNumberToParse;
                 if (!System.Int32.TryParse(value, out phoneNumberToParse))
                 {
-                    throw new Exception("Invalid input phone number! It has to be making up only from numbers!");
+                    throw new ExceptionsLogger("Invalid input phone number! It has to be making up only from numbers!");
                 }
 
                 this.phoneNumber = value;
@@ -94,7 +94,7 @@
 
             if (info.Length != 2)
             {
-                throw new Exception("Incorrect input data!");
+                throw new ExceptionsLogger("Incorrect input data!");
             }
 
             this.Name = info[0].Trim();
@@ -109,7 +109,7 @@
         {
             if (!path.EndsWith(".txt"))
             {
-                throw new Exception("Unknown text file format!");
+                throw new ExceptionsLogger("Unknown text file format!");
             }
 
             using (StreamReader sr = new StreamReader(path, System.Text.Encoding.Default))
@@ -118,7 +118,7 @@
 
                 if (info.Length == 0)
                 {
-                    throw new Exception($"File '{path}' is empty!");
+                    throw new ExceptionsLogger($"File '{path}' is empty!");
                 }
 
                 this.ParseLine(info);
@@ -133,7 +133,7 @@
         {
             if (!path.EndsWith(".txt"))
             {
-                throw new Exception("Unknown text file format!");
+                throw new ExceptionsLogger("Unknown text file format!");
             }
 
             using (StreamWriter sw = new StreamWriter(path, true, System.Text.Encoding.Default))

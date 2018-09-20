@@ -30,7 +30,7 @@
 
             if (info.Length != 2)
             {
-                throw new Exception("Incorrect input data!");
+                throw new ExceptionsLogger("Incorrect input data!");
             }
 
             this.Name = info[0].Trim();
@@ -66,7 +66,7 @@
 
             if (info.Length != 2)
             {
-                throw new Exception("Incorrect input data!");
+                throw new ExceptionsLogger("Incorrect input data!");
             }
 
             this.Name = info[0].Trim();
@@ -82,7 +82,7 @@
         {
             if (!path.EndsWith(".txt"))
             {
-                throw new Exception("Unknown text file format!");
+                throw new ExceptionsLogger("Unknown text file format!");
             }
 
             using (StreamReader sr = new StreamReader(path, System.Text.Encoding.Default))
@@ -91,7 +91,7 @@
 
                 if (info.Length == 0)
                 {
-                    throw new Exception($"File '{path}' is empty!");
+                    throw new ExceptionsLogger($"File '{path}' is empty!");
                 }
 
                 this.ParseLine(info);

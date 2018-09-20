@@ -27,9 +27,10 @@
             {
                 Console.WriteLine(exc.Message);
             }
-            catch (Exception exc)
+            catch (ExceptionsLogger exc)
             {
-                ExceptionsLogger excLoger = new ExceptionsLogger(exc.Message);
+                exc.RecordInFile();
+                exc.PrintOnConsole();
             }
         }
     }

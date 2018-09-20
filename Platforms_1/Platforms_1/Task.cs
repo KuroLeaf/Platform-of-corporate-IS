@@ -62,7 +62,7 @@
         {
             if (!path.EndsWith(".txt"))
             {
-                throw new Exception("Unknown text file format!");
+                throw new ExceptionsLogger("Unknown text file format!");
             }
 
             string[] lines = File.ReadAllLines(path);
@@ -88,7 +88,7 @@
                 }
                 else
                 {
-                    throw new Exception($"Unknown contact! Check info in file '{path}'");
+                    throw new ExceptionsLogger($"Unknown contact! Check info in file '{path}'");
                 }
 
             }
@@ -105,7 +105,7 @@
         {
             if (!path.EndsWith(".txt"))
             {
-                throw new Exception("Unknown text file format!");
+                throw new ExceptionsLogger("Unknown text file format!");
             }
 
             using (StreamWriter sw = new StreamWriter(path, false, System.Text.Encoding.Default))
@@ -164,7 +164,7 @@
         {
             if (!path.EndsWith(".txt"))
             {
-                throw new Exception("Unknown text file format!");
+                throw new ExceptionsLogger("Unknown text file format!");
             }
 
             using (StreamWriter sw = new StreamWriter(path, false, System.Text.Encoding.Default))
@@ -210,7 +210,7 @@
         {
             if (!path.EndsWith(".txt"))
             {
-                throw new Exception("Unknown text file format!");
+                throw new ExceptionsLogger("Unknown text file format!");
             }
 
             using (StreamWriter sw = new StreamWriter(path, false, System.Text.Encoding.Default))

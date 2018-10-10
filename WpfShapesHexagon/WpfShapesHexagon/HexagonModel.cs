@@ -1,4 +1,4 @@
-﻿namespace Hexagon
+﻿namespace WpfShapesHexagon
 {
     using System;
     using System.ComponentModel;
@@ -17,6 +17,16 @@
         private int number;
         private double left;
         private double top;
+
+        public HexagonModel()
+        {
+            Points = new PointCollection();
+            Stroke = Brushes.Black;
+            Fill = Brushes.Aqua;
+            Number = 0;
+            Left = 0;
+            Top = 0;
+        }
 
         public Brush Stroke
         {
@@ -42,6 +52,7 @@
                 OnPropertyChanged("Fill");
             }
         }
+
         public PointCollection Points
         {
             get
@@ -54,6 +65,7 @@
                 OnPropertyChanged("Ponts");
             }
         }
+
         public int Number
         {
             get
@@ -66,6 +78,7 @@
                 OnPropertyChanged("Number");
             }
         }
+
         public double Left
         {
             get
@@ -78,6 +91,7 @@
                 OnPropertyChanged("Left");
             }
         }
+
         public double Top
         {
             get
@@ -89,16 +103,6 @@
                 top = value;
                 OnPropertyChanged("Top");
             }
-        }
-
-        public HexagonModel()
-        {
-            Points = new PointCollection();
-            Stroke = Brushes.Black;
-            Fill = Brushes.Aqua;
-            Number = 0;
-            Left = 0;
-            Top = 0;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -1,4 +1,4 @@
-﻿namespace Hexagon
+﻿namespace WpfShapesHexagon
 {
     using System.Collections.ObjectModel;
     using System.IO;

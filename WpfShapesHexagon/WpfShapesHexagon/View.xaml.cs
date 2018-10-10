@@ -32,6 +32,7 @@ namespace WpfShapesHexagon
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = vm;
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
@@ -70,13 +71,39 @@ namespace WpfShapesHexagon
         { }
 
         private void MouseDownShape(object sender, MouseButtonEventArgs e)
-        {}
+        {
+            if (vm.Mode == MovingDrawingEnum.Moving.ToString() && !isMoving)
+            {
+                point = new Point(vm.XPos, vm.YPos);
+                pointO = new Point(Canvas.GetLeft(sender as UIElement), Canvas.GetTop(sender as UIElement));
+                isMoving = true;
+                var element = (UIElement)sender;
+                element.CaptureMouse();
+                Panel.SetZIndex(element, 1);
+            }
+        }
 
         private void MouseMoveShape(object sender, MouseEventArgs e)
-        {}
+        {
+            if (vm.Mode == MovingDrawingEnum.Moving.ToString() && isMoving)
+            {
+                var element = (UIElement)sender;
+                Canvas.SetLeft(element, pointO.X + vm.XPos - point.X);
+                Canvas.SetTop(element, pointO.Y + vm.YPos - point.Y);
+            }
+        }
 
         private void MouseUpShape(object sender, MouseButtonEventArgs e)
-        {}
+        {
+            if (isMoving && vm.Mode == MovingDrawingEnum.Moving.ToString())
+            {
+                var element = (UIElement)sender;
+
+                element.ReleaseMouseCapture();
+                Canvas.SetZIndex(element, 0);
+                isMoving = false;
+            }
+        }
     }
 
     public enum MovingDrawingEnum

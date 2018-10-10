@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 
 namespace WpfShapesHexagon
 {
+
     /// <summary>
     /// Interaction logic for ColorDialog.xaml
     /// </summary>

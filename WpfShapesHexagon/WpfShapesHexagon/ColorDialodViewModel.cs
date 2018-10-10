@@ -1,7 +1,22 @@
-﻿namespace WpfShapesHexagon
+﻿// <copyright file="ColorDialodViewModel.cs" company="8biTeam">
+//     Copyright (c) 8biTeam. All rights reserved.
+// </copyright>
+namespace WpfShapesHexagon
 {
-    class ColorDialodViewModel
+    /// <summary>
+    /// View model for ColorDialog
+    /// </summary>
+    public class ColorDialodViewModel
     {
-        public string ColorDialogWindowTitle { get { return "Colors settings"; } }
+        /// <summary>
+        /// Gets title of ColorDialog window
+        /// </summary>
+        public string ColorDialogWindowTitle
+        {
+            get
+            {
+                return "Colors settings";
+            }
+        }
     }
 }

@@ -1,4 +1,7 @@
-﻿ namespace WpfShapesHexagon
+﻿// <copyright file="ViewModel.cs" company="8biTeam">
+//     Copyright (c) 8biTeam. All rights reserved.
+// </copyright> 
+namespace WpfShapesHexagon
 {
     using System;
     using System.Collections.ObjectModel;
@@ -10,7 +13,13 @@
 
     public class ViewModel: INotifyPropertyChanged
     {
-        public string MainWindowTitle { get { return "Hexagons Painter"; } }
+        public string MainWindowTitle
+        {
+            get
+            {
+                return "Hexagons Painter";
+            }
+        }
 
         private int xPos;
         public int XPos

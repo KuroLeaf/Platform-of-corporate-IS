@@ -5,10 +5,14 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
-    Title="Set colors"
+    xmlns:local="clr-namespace:WpfShapesHexagon"
+    Title="{Binding ColorDialogWindowTitle}"
     Width="250"
     Height="200"
     mc:Ignorable="d">
+    <Window.DataContext>
+        <local:ColorDialodViewModel/>
+    </Window.DataContext>
     <StackPanel>
         <TextBlock Margin="30,10,10,0" Text="Fond" />
         <xctk:ColorPicker

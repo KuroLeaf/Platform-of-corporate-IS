@@ -4,10 +4,14 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="Hexagon Painter"
+    xmlns:local="clr-namespace:WpfShapesHexagon"
+    Title="{Binding MainWindowTitle}"
     Width="900"
     Height="700"
     mc:Ignorable="d">
+    <Window.DataContext>
+        <local:ViewModel/>
+    </Window.DataContext>
     <DockPanel Background="NavajoWhite">
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="File">

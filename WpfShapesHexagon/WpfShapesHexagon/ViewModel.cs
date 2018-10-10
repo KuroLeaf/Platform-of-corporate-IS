@@ -10,6 +10,8 @@
 
     public class ViewModel: INotifyPropertyChanged
     {
+        public string MainWindowTitle { get { return "Hexagons Painter"; } }
+
         private int xPos;
         public int XPos
         {

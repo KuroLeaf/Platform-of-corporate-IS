@@ -1,8 +1,8 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace UnitTestProject1
+﻿namespace WpfShapesHexagonUnitTestProject
 {
+    using WpfShapesHexagon;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
     [TestClass]
     public class UnitTest1
     {

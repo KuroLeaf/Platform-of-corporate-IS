@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfShapesHexagon", "WpfShapesHexagon\WpfShapesHexagon.csproj", "{C7518E3A-2AC9-4E6B-8CE7-F9C0FF5844D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{F3C347EA-EE8F-4496-9F3F-1E20E7F9A691}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfShapesHexagonUnitTestProject", "UnitTestProject1\WpfShapesHexagonUnitTestProject.csproj", "{F3C347EA-EE8F-4496-9F3F-1E20E7F9A691}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

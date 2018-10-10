@@ -80,7 +80,7 @@ namespace WpfShapesHexagon
         public ViewModel()
         {
             Polygones = new ObservableCollection<Polygon>();
-            Mode = "Drawing";
+            Mode = MovingDrawingEnum.Drawing.ToString();
             XPos = 0;
             YPos = 0;
         }

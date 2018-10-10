@@ -22,8 +22,8 @@
                 <MenuItem Click="Exit_Click" Header="Exit" />
             </MenuItem>
             <MenuItem Header="Shapes">
-                <MenuItem Click="DrawMode_Click" Header="Drawing" />
-                <MenuItem Click="MoveMode_Click" Header="Moving" />
+                <MenuItem Click="DrawingMode_Click" Header="Drawing" />
+                <MenuItem Click="MovingMode_Click" Header="Moving" />
             </MenuItem>
 
         </Menu>

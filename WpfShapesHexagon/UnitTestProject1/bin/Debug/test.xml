@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<ArrayOfHexagonModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <HexagonModel>
+    <Stroke xsi:type="SolidColorBrush">
+      <Opacity>1</Opacity>
+      <Transform xsi:type="MatrixTransform">
+        <Matrix>
+          <M11>1</M11>
+          <M12>0</M12>
+          <M21>0</M21>
+          <M22>1</M22>
+          <OffsetX>0</OffsetX>
+          <OffsetY>0</OffsetY>
+        </Matrix>
+      </Transform>
+      <RelativeTransform xsi:type="MatrixTransform">
+        <Matrix>
+          <M11>1</M11>
+          <M12>0</M12>
+          <M21>0</M21>
+          <M22>1</M22>
+          <OffsetX>0</OffsetX>
+          <OffsetY>0</OffsetY>
+        </Matrix>
+      </RelativeTransform>
+      <Color>
+        <A>255</A>
+        <R>0</R>
+        <G>0</G>
+        <B>0</B>
+        <ScA>1</ScA>
+        <ScR>0</ScR>
+        <ScG>0</ScG>
+        <ScB>0</ScB>
+      </Color>
+    </Stroke>
+    <Fill xsi:type="SolidColorBrush">
+      <Opacity>1</Opacity>
+      <Transform xsi:type="MatrixTransform">
+        <Matrix>
+          <M11>1</M11>
+          <M12>0</M12>
+          <M21>0</M21>
+          <M22>1</M22>
+          <OffsetX>0</OffsetX>
+          <OffsetY>0</OffsetY>
+        </Matrix>
+      </Transform>
+      <RelativeTransform xsi:type="MatrixTransform">
+        <Matrix>
+          <M11>1</M11>
+          <M12>0</M12>
+          <M21>0</M21>
+          <M22>1</M22>
+          <OffsetX>0</OffsetX>
+          <OffsetY>0</OffsetY>
+        </Matrix>
+      </RelativeTransform>
+      <Color>
+        <A>255</A>
+        <R>240</R>
+        <G>248</G>
+        <B>255</B>
+        <ScA>1</ScA>
+        <ScR>0.8713671</ScR>
+        <ScG>0.9386857</ScG>
+        <ScB>1</ScB>
+      </Color>
+    </Fill>
+    <Points />
+    <Number>2</Number>
+    <Left>100</Left>
+    <Top>100</Top>
+  </HexagonModel>
+</ArrayOfHexagonModel>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OperatorTaxi
 {
-    class ViewModel
+    public class ViewModel
     {
     }
 }

@@ -5,7 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OperatorTaxi"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Orders Manager"
+        Height="450"
+        Width="800">
+    <Window.DataContext>
+        <local:ViewModel/>
+    </Window.DataContext>
+    
     <Grid>
         
     </Grid>

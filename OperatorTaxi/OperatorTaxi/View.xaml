@@ -1,18 +1,70 @@
-﻿<Window x:Class="OperatorTaxi.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:OperatorTaxi"
-        mc:Ignorable="d"
-        Title="Orders Manager"
-        Height="450"
-        Width="800">
+﻿<Window
+    x:Class="OperatorTaxi.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:OperatorTaxi"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Orders Manager"
+    Width="Auto"
+    Height="Auto"
+    TextBlock.TextAlignment="Center"
+    mc:Ignorable="d">
     <Window.DataContext>
-        <local:ViewModel/>
+        <local:ViewModel />
     </Window.DataContext>
-    
+
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <ListView
+            x:Name="orderListView"
+            Grid.Column="0"
+            Width="Auto"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="120" Header="Where" />
+                    <GridViewColumn Width="120" Header="Destination" />
+                    <GridViewColumn Width="120" Header="Passengers amount" />
+                    <GridViewColumn Width="120" Header="Status" />
+                    <GridViewColumn Width="120" Header="Car number" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <StackPanel
+            Grid.Column="1"
+            VerticalAlignment="Top"
+            Orientation="Vertical">
+            <Button
+                Height="30"
+                Margin="10"
+                Click="Taxists"
+                Content="Taxists" />
+            <Button
+                Height="30"
+                Margin="10"
+                Click="AddOrder"
+                Content="Add order" />
+            <Button
+                Height="30"
+                Margin="10"
+                Click="DeleteOrder"
+                Content="Delete order" />
+            <Button
+                Height="30"
+                Margin="10"
+                Click="SaveData"
+                Content="Save data" />
+            <Button
+                Height="30"
+                Margin="10"
+                Click="UploadData"
+                Content="Uploat data" />
+        </StackPanel>
     </Grid>
 </Window>

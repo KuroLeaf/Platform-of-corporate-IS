@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace OperatorTaxi
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для AddOrderView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AddOrderView : Window
     {
-        public MainWindow()
+        public AddOrderView()
         {
             InitializeComponent();
         }

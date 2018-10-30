@@ -10,6 +10,7 @@
     Height="Auto"
     TextBlock.TextAlignment="Center"
     mc:Ignorable="d">
+
     <Window.DataContext>
         <local:ViewModel />
     </Window.DataContext>
@@ -24,14 +25,33 @@
             Grid.Column="0"
             Width="Auto"
             HorizontalAlignment="Stretch"
-            VerticalAlignment="Stretch">
+            VerticalAlignment="Stretch"
+            x:FieldModifier="public"
+            ItemsSource="{Binding Path=Orders, UpdateSourceTrigger=PropertyChanged}"
+            SelectedItem="{Binding SelectedOrder, UpdateSourceTrigger=PropertyChanged}"
+            SelectionMode="Single">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Width="120" Header="Where" />
-                    <GridViewColumn Width="120" Header="Destination" />
-                    <GridViewColumn Width="120" Header="Passengers amount" />
-                    <GridViewColumn Width="120" Header="Status" />
-                    <GridViewColumn Width="120" Header="Car number" />
+                    <GridViewColumn
+                        Width="120"
+                        DisplayMemberBinding="{Binding Where}"
+                        Header="Where" />
+                    <GridViewColumn
+                        Width="120"
+                        DisplayMemberBinding="{Binding Destination}"
+                        Header="Destination" />
+                    <GridViewColumn
+                        Width="120"
+                        DisplayMemberBinding="{Binding PassengersAmount}"
+                        Header="Passengers amount" />
+                    <GridViewColumn
+                        Width="120"
+                        DisplayMemberBinding="{Binding Status}"
+                        Header="Status" />
+                    <GridViewColumn
+                        Width="120"
+                        DisplayMemberBinding="{Binding CarNumber}"
+                        Header="Car number" />
                 </GridView>
             </ListView.View>
         </ListView>
@@ -43,7 +63,7 @@
             <Button
                 Height="30"
                 Margin="10"
-                Click="Taxists"
+                Click="AddTaxist"
                 Content="Taxists" />
             <Button
                 Height="30"

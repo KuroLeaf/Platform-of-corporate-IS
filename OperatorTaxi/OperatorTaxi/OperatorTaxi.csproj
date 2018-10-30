@@ -70,34 +70,34 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AddOrderView.xaml.cs">
+    <Compile Include="View\AddOrderView.xaml.cs">
       <DependentUpon>AddOrderView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AddOrderViewModel.cs" />
-    <Compile Include="AddTaxistView.xaml.cs">
+    <Compile Include="ViewModels\AddOrderViewModel.cs" />
+    <Compile Include="View\AddTaxistView.xaml.cs">
       <DependentUpon>AddTaxistView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AddTaxistViewModel.cs" />
-    <Compile Include="Order.cs" />
-    <Compile Include="Taxist.cs" />
-    <Compile Include="TaxiView.xaml.cs">
+    <Compile Include="ViewModels\AddTaxistViewModel.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Taxist.cs" />
+    <Compile Include="View\TaxiView.xaml.cs">
       <DependentUpon>TaxiView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TaxiViewModel.cs" />
-    <Compile Include="ViewModel.cs" />
-    <Page Include="AddOrderView.xaml">
+    <Compile Include="ViewModels\TaxiViewModel.cs" />
+    <Compile Include="ViewModels\ViewModel.cs" />
+    <Page Include="View\AddOrderView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AddTaxistView.xaml">
+    <Page Include="View\AddTaxistView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TaxiView.xaml">
+    <Page Include="View\TaxiView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View.xaml">
+    <Page Include="View\View.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -105,7 +105,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="View.xaml.cs">
+    <Compile Include="View\View.xaml.cs">
       <DependentUpon>View.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -137,5 +137,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

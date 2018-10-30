@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace OperatorTaxi
+namespace View
 {
     /// <summary>
-    /// Логика взаимодействия для AddOrderView.xaml
+    /// Логика взаимодействия для AddTaxistView.xaml
     /// </summary>
-    public partial class AddOrderView : Window
+    public partial class AddTaxistView : Window
     {
-        public AddOrderView()
+        public AddTaxistView()
         {
             InitializeComponent();
         }

@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OperatorTaxi
+namespace ViewModels
 {
-    public class TaxiViewModel
+    public class AddOrderViewModel
     {
+
     }
 }

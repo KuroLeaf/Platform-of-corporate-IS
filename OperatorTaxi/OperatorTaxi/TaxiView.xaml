@@ -11,6 +11,11 @@
     TextBlock.TextAlignment="Center"
     mc:Ignorable="d">
 
+    <Window.DataContext>
+        <local:TaxiViewModel />
+    </Window.DataContext>
+
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*" />
@@ -52,17 +57,14 @@
             <Button
                 Height="30"
                 Margin="10"
-                Click="AddTaxi"
                 Content="Set taxist" />
             <Button
                 Height="30"
                 Margin="10"
-                Click="AddTaxist"
                 Content="Add" />
             <Button
                 Height="30"
                 Margin="10"
-                Click="DeleteTaxist"
                 Content="Delete" />
         </StackPanel>
     </Grid>

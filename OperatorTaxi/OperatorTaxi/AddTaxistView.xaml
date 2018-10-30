@@ -9,6 +9,9 @@
     Width="300"
     Height="250"
     mc:Ignorable="d">
+    <Window.DataContext>
+        <local:AddTaxistViewModel />
+    </Window.DataContext>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="3*" />
@@ -61,7 +64,6 @@
             Width="auto"
             Height="auto"
             Margin="10,10,10,10"
-            Click="AddTaxist"
             Content="Add" />
     </Grid>
 </Window>

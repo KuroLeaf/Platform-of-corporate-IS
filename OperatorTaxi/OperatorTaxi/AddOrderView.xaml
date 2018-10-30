@@ -10,6 +10,9 @@
     Height="300"
     TextBlock.TextAlignment="Center"
     mc:Ignorable="d">
+    <Window.DataContext>
+        <local:AddOrderViewModel />
+    </Window.DataContext>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="5*" />
@@ -76,7 +79,6 @@
             Width="auto"
             Height="auto"
             Margin="10,10,10,10"
-            Click="AddOrder"
             Content="Add" />
     </Grid>
 </Window>

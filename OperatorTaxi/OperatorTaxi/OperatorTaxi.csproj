@@ -73,14 +73,17 @@
     <Compile Include="AddOrderView.xaml.cs">
       <DependentUpon>AddOrderView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddOrderViewModel.cs" />
     <Compile Include="AddTaxistView.xaml.cs">
       <DependentUpon>AddTaxistView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddTaxistViewModel.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Taxist.cs" />
     <Compile Include="TaxiView.xaml.cs">
       <DependentUpon>TaxiView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TaxiViewModel.cs" />
     <Compile Include="ViewModel.cs" />
     <Page Include="AddOrderView.xaml">
       <SubType>Designer</SubType>

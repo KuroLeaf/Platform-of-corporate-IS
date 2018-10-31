@@ -9,6 +9,47 @@
     Height="300"
     TextBlock.TextAlignment="Center"
     mc:Ignorable="d">
+    <Window.Resources>
+        <Style TargetType="Button" x:Name="Flat">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" Background="#828282" BorderThickness="0" Padding="5">
+                            <ContentPresenter x:Name="cp"
+                                              Content="{TemplateBinding Content}"
+                                              TextBlock.Foreground="White"
+                                              VerticalAlignment="Center" 
+                                              HorizontalAlignment="Center" 
+                                              TextBlock.FontSize="15"
+                                                                        
+                                              >
+
+                            </ContentPresenter>
+
+
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter  TargetName="border" Property="Background" Value="White"></Setter>
+                                <Setter TargetName="cp" Property="TextBlock.Foreground" Value="Gray"></Setter>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="False">
+                                <Setter  TargetName="border" Property="Background" Value="#686868"></Setter>
+                                <Setter TargetName="cp" Property="TextBlock.Foreground" Value="White"></Setter>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="False">
+                                <Setter  TargetName="border" Property="Background" Value="#3d3d3d"></Setter>
+                                <Setter TargetName="cp" Property="TextBlock.Foreground" Value="White"></Setter>
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Height" Value="50px"></Setter>
+            <Setter Property="Margin" Value="1px,0px,1px,0px"></Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="5*" />
@@ -21,14 +62,16 @@
                 <RowDefinition Height="70" />
             </Grid.RowDefinitions>
             <TextBlock
-                Width="63"
+                FontSize="14"
+                Width="77"
                 Height="30"
-                Margin="24,22,0,0"
+                Margin="10,22,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Text="Where"
                 TextWrapping="Wrap" />
             <TextBox
+                  FontSize="14"
                 x:Name="startPoint"
                 Grid.Row="0"
                 Width="180"
@@ -37,15 +80,17 @@
                 HorizontalAlignment="Left" />
 
             <TextBlock
+                  FontSize="14"
                 Grid.Row="1"
-                Width="63"
+                Width="77"
                 Height="30"
-                Margin="24,22,0,0"
+                Margin="10,22,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Text="Destination"
                 TextWrapping="Wrap" />
             <TextBox
+                  FontSize="14"
                 x:Name="endPoint"
                 Grid.Row="1"
                 Width="180"
@@ -54,27 +99,28 @@
                 HorizontalAlignment="Left" />
 
             <TextBlock
+                  FontSize="14"
                 Grid.Row="2"
-                Width="63"
-                Height="30"
-                Margin="24,23,0,0"
+                Width="77"
+                Height="39"
+                Margin="10,22,0,0"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Text="Passengers amount"
                 TextWrapping="Wrap" />
             <TextBox
+                FontSize="14"
                 x:Name="count"
                 Grid.Row="2"
                 Width="180"
-                Height="30"
-                Margin="92,22,0,23"
+                Margin="92,22,0,10"
                 HorizontalAlignment="Left" />
         </Grid>
         <Button
             Grid.Row="1"
             Width="auto"
             Height="auto"
-            Margin="10,10,10,10"
+            Margin="3,3,3,3"
             Click="AddOrder"
             Content="Add" />
     </Grid>

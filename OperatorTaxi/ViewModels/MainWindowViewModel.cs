@@ -76,7 +76,7 @@
         {
             this.OredrsPath = oredrsPath;
             this.TaxistsPath = taxistsPath;
-            Upload();
+           Upload();
         }
 
         public void Save()
@@ -134,6 +134,7 @@
             if (!File.Exists(OredrsPath))
             {
                 throw new Exception("File does not exists!");
+
             }
             var lines = File.ReadAllLines(OredrsPath, Encoding.UTF8);
             string[] line;

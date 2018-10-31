@@ -61,5 +61,9 @@ namespace OperatorTaxi
             vm.Upload();
         }
 
+        private void orderListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

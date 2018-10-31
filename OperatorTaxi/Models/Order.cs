@@ -4,8 +4,8 @@ namespace Models
 {
     public enum status
     {
-        NotAppointed,
-        Appointed
+        NOTAPPOINTED,
+        APPOINTED
     }
 
     public class Order

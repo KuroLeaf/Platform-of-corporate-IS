@@ -13,5 +13,26 @@
         {
             InitializeComponent();
         }
+
+        private void Add(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = (MainWindow)App.Current.MainWindow;
+            if (this.Model.Text != "" && this.Number.Text != "")
+            {
+                try
+                {
+                    mainWindow.vm.Taxists.Add(new Taxist(this.Model.Text, this.Number.Text, false));
+                    this.Close();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Incorrect input data!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Enter all data!");
+            }
+        }
     }
 }

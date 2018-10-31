@@ -68,6 +68,10 @@ namespace OperatorTaxi
         {
             vm.Upload();
         }
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
 
         private void orderListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

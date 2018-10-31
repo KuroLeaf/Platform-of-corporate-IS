@@ -47,7 +47,15 @@ namespace OperatorTaxi
 
         private void DeleteOrder(object sender, RoutedEventArgs e)
         {
-            vm.DeleteOrder();
+            if (vm.SelectedOrder != null)
+            {
+                vm.DeleteOrder();
+            }
+            else
+            {
+                MessageBox.Show("TO DELETE SOMETHING YOU MUST PICK ONE FIRST!!!");
+            }
+           
 
         }
 

@@ -33,7 +33,7 @@ namespace Models
             }
             set
             {
-                if (passengersAmount < 0 && passengersAmount > 7)
+                if (value < 0 || value > 8)
                 {
                     throw new Exception("Too many passengers");
                 }

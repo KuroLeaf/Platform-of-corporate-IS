@@ -35,7 +35,7 @@ namespace Models
             {
                 if (value < 0 || value > 8)
                 {
-                    throw new Exception("Too many passengers");
+                    throw new ArgumentOutOfRangeException("Wrong amount of passengers");
                 }
                 else
                 {

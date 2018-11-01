@@ -131,5 +131,16 @@ namespace OperatorTaxiTests
 
             Assert.AreEqual(ExpectedPassengersAmount, obj.PassengersAmount);
         }
+
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void GetPassengerAmountOutOfBoundsTest()
+        {
+            int ExpectedPassengerAmount = 10;
+            Models.Order obj = new Models.Order();
+            obj.PassengersAmount = 10;
+
+            Assert.AreEqual(ExpectedPassengerAmount, obj.PassengersAmount);
+        }
     }
 }

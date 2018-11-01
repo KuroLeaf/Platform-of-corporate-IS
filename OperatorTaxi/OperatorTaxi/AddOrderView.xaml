@@ -72,7 +72,7 @@
                 Text="Where"
                 TextWrapping="Wrap" />
             <TextBox
-                x:Name="startPoint"
+                x:Name="where"
                 Grid.Row="0"
                 Width="180"
                 Height="30"
@@ -91,7 +91,7 @@
                 Text="Destination"
                 TextWrapping="Wrap" />
             <TextBox
-                x:Name="endPoint"
+                x:Name="destination"
                 Grid.Row="1"
                 Width="180"
                 Height="30"
@@ -110,7 +110,7 @@
                 Text="Passengers amount"
                 TextWrapping="Wrap" />
             <TextBox
-                x:Name="count"
+                x:Name="passengersAmount"
                 Grid.Row="2"
                 Width="180"
                 Margin="92,22,0,10"

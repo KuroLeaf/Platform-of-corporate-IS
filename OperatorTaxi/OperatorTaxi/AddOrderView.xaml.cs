@@ -28,11 +28,11 @@
         private void AddOrder(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = (MainWindow)App.Current.MainWindow;
-            if (this.startPoint.Text != "" && this.endPoint.Text != "" && this.count.Text != "")
+            if (this.where.Text != "" && this.destination.Text != "" && this.passengersAmount.Text != "")
             {
                 try
                 {
-                    mainWindow.vm.Orders.Add(new Order(this.startPoint.Text, this.endPoint.Text, Convert.ToInt32(this.count.Text), status.NOTAPPOINTED, "------"));
+                    mainWindow.vm.Orders.Add(new Order(this.where.Text, this.destination.Text, Convert.ToInt32(this.passengersAmount.Text), status.NOTAPPOINTED, "------"));
                     this.Close();
                 }
                 catch (Exception)

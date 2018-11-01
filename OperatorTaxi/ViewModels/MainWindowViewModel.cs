@@ -133,7 +133,7 @@
             Orders = new ObservableCollection<Order>();
             if (!File.Exists(OrdersPath))
             {
-                throw new Exception("File does not exists!");
+                throw new  Exception("File does not exists!");
 
             }
             var lines = File.ReadAllLines(OrdersPath, Encoding.UTF8);

@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Models;
 using System.Collections.ObjectModel;
+using ViewModels;
 
 namespace OperatorTaxiTests
 {
@@ -30,7 +31,7 @@ namespace OperatorTaxiTests
 
         [TestMethod()]
         [ExpectedException(typeof(Exception))]
-        public void WrongPathesTest()
+        public void WrongInitializePathesTest()
         {
             String WrongOrdersPath = "WrongOrders.txt";
             String WrongTaxistsPath = "WrongTaxists.txt";

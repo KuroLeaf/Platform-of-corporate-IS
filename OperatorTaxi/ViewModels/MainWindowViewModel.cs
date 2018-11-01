@@ -16,7 +16,7 @@
         private ObservableCollection<Order> orders;
         private ObservableCollection<Taxist> taxists;
 
-        public string OredrsPath { get; set; }
+        public string OrdersPath { get; set; }
 
         public string TaxistsPath { get; set; }
 
@@ -74,7 +74,7 @@
 
         public MainWindowViewModel(string oredrsPath, string taxistsPath)
         {
-            this.OredrsPath = oredrsPath;
+            this.OrdersPath = oredrsPath;
             this.TaxistsPath = taxistsPath;
            Upload();
         }
@@ -86,7 +86,7 @@
             {
                 lines1[i] = Orders[i].Where + ", " + Orders[i].Destination + ", " + Orders[i].PassengersAmount + ", " + Orders[i].Status + ", " + Orders[i].CarNumber;
             }
-            File.WriteAllLines(OredrsPath, lines1);
+            File.WriteAllLines(OrdersPath, lines1);
             var lines2 = new string[Taxists.Count];
             for (int i = 0; i < lines2.Length; ++i)
             {
@@ -131,12 +131,12 @@
         public void Upload()
         {
             Orders = new ObservableCollection<Order>();
-            if (!File.Exists(OredrsPath))
+            if (!File.Exists(OrdersPath))
             {
                 throw new Exception("File does not exists!");
 
             }
-            var lines = File.ReadAllLines(OredrsPath, Encoding.UTF8);
+            var lines = File.ReadAllLines(OrdersPath, Encoding.UTF8);
             string[] line;
             string where;
             string destination;

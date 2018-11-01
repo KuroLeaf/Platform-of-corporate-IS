@@ -71,7 +71,7 @@ namespace OperatorTaxiTests
             String OrdersPath = "Orders.txt";
             String TaxistsPath = "Taxists.txt";
 
-            //Order data
+            //Order mock data
             String Destination = "Shevchenka, 12";
             String CarNumber = "BC0173AC";
             String Where = "University, 1";
@@ -80,7 +80,7 @@ namespace OperatorTaxiTests
 
             Order order = new Order(Where, Destination, PassengersAmount, Status, CarNumber);
 
-            //Taxist data
+            //Taxist mock data
             bool isBusy = true;
             String Model = "Tesla";
             String Number = "BC0173AC";
@@ -96,32 +96,34 @@ namespace OperatorTaxiTests
             Assert.AreEqual(taxist, view.SelectedTaxi);
         }
 
-        //[TestMethod()]
-        //public void DatabaseTest()
-        //{
-        //    String OrderPath = "University, 1";
-        //    String TaxistPath = "Shevchenko, 5";
+        [TestMethod()]
+        [ExpectedException(typeof(Exception))]
+        public void UploadExceptionsTest()
+        {
+            String OrdersPath = "Orders.txt";
+            String TaxistsPath = "Taxists.txt";
 
-        //    String ExpectedOrderPath = "University, 1";
-        //    String ExpectedTaxistPath = "Shevchenko, 5";
-        //    ViewModels.MainWindowViewModel view = new ViewModels.MainWindowViewModel(OrderPath, TaxistPath);
-        //    ObservableCollection <> view.Taxists;
-        //    Assert.AreEqual(ExpectedOrderPath, view.SelectedOrder.ToString());
+            String WrongOrderPath = "WrongOrders.txt";
 
-        //}
+            //Order mock data
+            String Destination = "Shevchenka, 12";
+            String CarNumber = "BC0173AC";
+            String Where = "University, 1";
+            Models.status Status = APPOINTED;
+            int PassengersAmount = 1;
 
-        //[TestMethod()]
-        //public void OrderTest()
-        //{
-        //    String OrderPath = "University, 1";
-        //    String TaxistPath = "Shevchenko, 5";
+            Order order = new Order(Where, Destination, PassengersAmount, Status, CarNumber);
 
-        //    String ExpectedOrderPath = "University, 1";
-        //    String ExpectedTaxistPath = "Shevchenko, 5";
-        //    ViewModels.MainWindowViewModel view = new ViewModels.MainWindowViewModel(OrderPath, TaxistPath);
+            //Taxist mock data
+            bool isBusy = true;
+            String Model = "Tesla";
+            String Number = "BC0173AC";
 
-        //    Assert.AreEqual(ExpectedOrderPath, view.SelectedOrder.Destination);
-        //}
+            Taxist taxist = new Taxist(Model, Number, isBusy);
 
+            view = new ViewModels.MainWindowViewModel(OrdersPath, TaxistsPath);
+            view.OrdersPath = WrongOrderPath;
+            view.Upload();     
+        }
     }
 }

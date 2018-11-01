@@ -72,11 +72,11 @@
             }
         }
 
-        public MainWindowViewModel(string oredrsPath, string taxistsPath)
+        public MainWindowViewModel(string ordersPath, string taxistsPath)
         {
-            this.OrdersPath = oredrsPath;
+            this.OrdersPath = ordersPath;
             this.TaxistsPath = taxistsPath;
-           Upload();
+            Upload();
         }
 
         public void Save()

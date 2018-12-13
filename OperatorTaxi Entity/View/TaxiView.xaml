@@ -1,0 +1,71 @@
+﻿<Window
+    x:Class="View.TaxiView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:ViewModels;assembly=ViewModels"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Taxists"
+    Width="500"
+    Height="200"
+    TextBlock.TextAlignment="Center"
+    mc:Ignorable="d">
+
+    <Window.DataContext>
+        <local:TaxiViewModel/>
+    </Window.DataContext>
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0">
+            <ListView
+                x:Name="Taxists"
+                Width="Auto"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                SelectionMode="Single">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn
+                            Width="80"
+                            DisplayMemberBinding="{Binding Model}"
+                            Header="Model" />
+                        <GridViewColumn
+                            Width="80"
+                            DisplayMemberBinding="{Binding Number}"
+                            Header="Number" />
+                        <GridViewColumn
+                            Width="80"
+                            DisplayMemberBinding="{Binding Color}"
+                            Header="Color" />
+                        <GridViewColumn
+                            Width="80"
+                            DisplayMemberBinding="{Binding IsBusy}"
+                            Header="Is busy" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+        <StackPanel
+            Grid.Column="1"
+            VerticalAlignment="Top"
+            Orientation="Vertical">
+            <Button
+                Height="30"
+                Margin="10"
+                Content="Set taxist" />
+            <Button
+                Height="30"
+                Margin="10"
+                Content="Add" />
+            <Button
+                Height="30"
+                Margin="10"
+                Content="Delete" />
+        </StackPanel>
+    </Grid>
+</Window>

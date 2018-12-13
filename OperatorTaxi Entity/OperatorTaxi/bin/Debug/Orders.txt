@@ -1,0 +1,7 @@
+Horodotska 40, Zelena 120, 5, APPOINTED, BC4321
+Pechera 39a, Lichakivska 23, 3, APPOINTED, CA1431
+Bandery 144, Univesitetska 1, 0, NOTAPPOINTED, ------
+Saharova 11, Lisenka 1, 5, APPOINTED, AA1313
+Shevchenka 132, Naukova 56, 7, NOTAPPOINTED, ------
+Akiba 11, Ikebukuro 515, 1, APPOINTED, DS1313
+Shichika 13, Yokoha 184, 2, NOTAPPOINTED, ------

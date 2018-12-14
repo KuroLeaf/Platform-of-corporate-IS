@@ -81,7 +81,7 @@
            
             ItemsSource="{Binding Path=Orders, UpdateSourceTrigger=PropertyChanged}"
             SelectedItem="{Binding SelectedOrder, UpdateSourceTrigger=PropertyChanged}"
-            SelectionMode="Single" SelectionChanged="orderListView_SelectionChanged">
+            SelectionMode="Single">
 
             <ListView.View >
                 <GridView ColumnHeaderContainerStyle="{StaticResource myHeaderStyle}" >

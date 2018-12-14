@@ -1,8 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Models;
+using OperatorTaxi.Models;
 using System.Collections.ObjectModel;
-using ViewModels;
+using OperatorTaxi.ViewModels;
 
 namespace OperatorTaxiTests
 {
@@ -13,7 +13,7 @@ namespace OperatorTaxiTests
         public Taxist Observable { get; private set; }
         public status APPOINTED { get; private set; }
 
-        public ViewModels.MainWindowViewModel view;
+        public MainWindowViewModel view;
 
         [TestMethod()]
         public void InitializationMainWindowTest()
@@ -24,7 +24,7 @@ namespace OperatorTaxiTests
             String ExpectedOrderPath = "Orders.txt";
             String ExpectedTaxistPath = "Taxists.txt";
 
-            view = new ViewModels.MainWindowViewModel(OrderPath, TaxistPath);
+            view = new MainWindowViewModel(OrderPath, TaxistPath);
             Assert.AreEqual(ExpectedOrderPath, view.OrdersPath);
             Assert.AreEqual(ExpectedTaxistPath, view.TaxistsPath);
         }
@@ -39,7 +39,7 @@ namespace OperatorTaxiTests
             String ExpectedOrdersPath = "Orders.txt";
             String ExpectedTaxistsPath = "Taxists.txt";
 
-            view = new ViewModels.MainWindowViewModel(WrongOrdersPath, WrongTaxistsPath);
+            view = new MainWindowViewModel(WrongOrdersPath, WrongTaxistsPath);
 
             Assert.AreEqual(ExpectedOrdersPath, view.OrdersPath);
             Assert.AreEqual(ExpectedTaxistsPath, view.TaxistsPath);
@@ -57,7 +57,7 @@ namespace OperatorTaxiTests
             String ExpectedOrdersPath = "Orders1.txt";
             String ExpectedTaxistsPath = "Taxists1.txt";
 
-            view = new ViewModels.MainWindowViewModel(OldOrdersPath,OldTaxistsPath);
+            view = new MainWindowViewModel(OldOrdersPath,OldTaxistsPath);
 
             view.OrdersPath = UpdatedOrdersPath;
             view.TaxistsPath = UpdatedTaxistsPath;
@@ -76,7 +76,7 @@ namespace OperatorTaxiTests
             String Destination = "Shevchenka, 12";
             String CarNumber = "BC0173AC";
             String Where = "University, 1";
-            Models.status Status = APPOINTED;
+            status Status = APPOINTED;
             int PassengersAmount = 1;
 
             Order order = new Order(Where, Destination, PassengersAmount, Status, CarNumber);
@@ -88,7 +88,7 @@ namespace OperatorTaxiTests
 
             Taxist taxist = new Taxist(Model, Number, isBusy);
 
-            view = new ViewModels.MainWindowViewModel(OrdersPath, TaxistsPath);
+            view = new MainWindowViewModel(OrdersPath, TaxistsPath);
 
             view.SelectedOrder = order;
             view.SelectedTaxi = taxist;
@@ -110,7 +110,7 @@ namespace OperatorTaxiTests
             String Destination = "Shevchenka, 12";
             String CarNumber = "BC0173AC";
             String Where = "University, 1";
-            Models.status Status = APPOINTED;
+            status Status = APPOINTED;
             int PassengersAmount = 1;
 
             Order order = new Order(Where, Destination, PassengersAmount, Status, CarNumber);
@@ -122,7 +122,7 @@ namespace OperatorTaxiTests
 
             Taxist taxist = new Taxist(Model, Number, isBusy);
 
-            view = new ViewModels.MainWindowViewModel(OrdersPath, TaxistsPath);
+            view = new MainWindowViewModel(OrdersPath, TaxistsPath);
             view.OrdersPath = WrongOrderPath;
             view.Upload();     
         }

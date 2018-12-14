@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Models;
+using OperatorTaxi.Models;
 
 namespace OperatorTaxi
 {
@@ -60,8 +60,15 @@ namespace OperatorTaxi
 
         private void DeleteTaxist(object sender, RoutedEventArgs e)
         {
-            mainWindow.vm.DeleteTaxist();
-            mainWindow.orderListView.Items.Refresh();
+            if (mainWindow.vm.SelectedTaxi == null)
+            {
+                MessageBox.Show("TO DELETE SOMETHING YOU MUST PICK ONE FIRST!!!");
+            }
+            else
+            {
+                mainWindow.vm.DeleteTaxist();
+                mainWindow.orderListView.Items.Refresh();
+            }
         }
     }
 }

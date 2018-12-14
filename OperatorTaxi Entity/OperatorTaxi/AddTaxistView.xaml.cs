@@ -2,7 +2,7 @@
 {
     using System;
     using System.Windows;
-    using Models;
+    using OperatorTaxi.Models;
 
     /// <summary>
     /// Логика взаимодействия для AddTaxistView.xaml

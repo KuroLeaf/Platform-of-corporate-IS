@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using ViewModels;
+using OperatorTaxi.ViewModels;
 
 namespace OperatorTaxi
 {
@@ -55,8 +55,6 @@ namespace OperatorTaxi
             {
                 MessageBox.Show("TO DELETE SOMETHING YOU MUST PICK ONE FIRST!!!");
             }
-           
-
         }
 
         private void SaveData(object sender, RoutedEventArgs e)

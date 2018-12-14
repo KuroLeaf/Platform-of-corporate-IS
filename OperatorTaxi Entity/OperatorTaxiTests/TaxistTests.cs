@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OperatorTaxi.Models;
 
 namespace OperatorTaxiTests
 {
@@ -9,7 +10,7 @@ namespace OperatorTaxiTests
         [TestMethod()]
         public void TaxistDefaultConstructorTest()
         {
-            Models.Taxist obj = new Models.Taxist();
+            Taxist obj = new Taxist();
             Assert.AreEqual(false, obj.IsBusy);
             Assert.AreEqual(null, obj.Model);
             Assert.AreEqual(null, obj.Number);
@@ -29,7 +30,7 @@ namespace OperatorTaxiTests
             String NumberExpected = "BC0173AC";
             //act
 
-            Models.Taxist obj = new Models.Taxist(Model,Number,isBusy);
+            Taxist obj = new Taxist(Model,Number,isBusy);
             //assert
 
             Assert.AreEqual(isBusyExpected, obj.IsBusy);
@@ -46,7 +47,7 @@ namespace OperatorTaxiTests
             String ModelExpected = "Tesla";
             //act
 
-            Models.Taxist obj = new Models.Taxist();
+            Taxist obj = new Taxist();
             obj.Model = Model;
             //assert
 
@@ -62,7 +63,7 @@ namespace OperatorTaxiTests
             String NumberExpected = "BC5703";
             //act
 
-            Models.Taxist obj = new Models.Taxist();
+            Taxist obj = new Taxist();
             obj.Number = Number;
             //assert
 
@@ -78,7 +79,7 @@ namespace OperatorTaxiTests
             bool isBusyExpected = true;
             //act
 
-            Models.Taxist obj = new Models.Taxist();
+            Taxist obj = new Taxist();
             obj.IsBusy = isBusy;
             //assert
 

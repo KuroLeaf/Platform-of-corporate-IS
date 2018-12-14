@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Models;
+using OperatorTaxi.Models;
 
 namespace OperatorTaxiTests
 {
@@ -14,7 +14,7 @@ namespace OperatorTaxiTests
         [TestMethod()]
         public void OrderDefaultConstructorTest()
         {
-            Models.Order obj = new Models.Order();
+            Order obj = new Order();
             Assert.AreEqual(null, obj.CarNumber);
             Assert.AreEqual(null, obj.Destination);
             Assert.AreEqual(NOTAPPOINTED, obj.Status);
@@ -30,17 +30,17 @@ namespace OperatorTaxiTests
             String Destination = "Shevchenka, 12";
             String CarNumber = "BC0173AC";
             String Where = "University, 1";
-            Models.status Status = APPOINTED;
+            status Status = APPOINTED;
             int PassengersAmount = 1;
 
             String ExpectedDestination = "Shevchenka, 12";
             String ExpectedCarNumber = "BC0173AC";
             String ExpectedWhere = "University, 1";
-            Models.status ExpectedStatus = APPOINTED;
+            status ExpectedStatus = APPOINTED;
             int ExpectedPassengersAmount = 1;
             //act
 
-            Models.Order obj = new Models.Order(Where, Destination, PassengersAmount, Status, CarNumber);
+            Order obj = new Order(Where, Destination, PassengersAmount, Status, CarNumber);
             //assert
 
             Assert.AreEqual(ExpectedDestination, obj.Destination);
@@ -59,7 +59,7 @@ namespace OperatorTaxiTests
             String ExpectedDestination = "Shevchenka, 1";
             //act
 
-            Models.Order obj = new Models.Order();
+            Order obj = new Order();
             obj.Destination = Destination;
             //assert
 
@@ -71,12 +71,12 @@ namespace OperatorTaxiTests
         {
             //arrange
 
-            Models.status Status = APPOINTED;
+            status Status = APPOINTED;
 
-            Models.status ExpectedStatus = APPOINTED;
+            status ExpectedStatus = APPOINTED;
             //act
 
-            Models.Order obj = new Models.Order();
+            Order obj = new Order();
             obj.Status = Status;
             //assert
 
@@ -92,7 +92,7 @@ namespace OperatorTaxiTests
             String ExpectedCarNumber = "BC5362AC";
             //act
 
-            Models.Order obj = new Models.Order();
+            Order obj = new Order();
             obj.CarNumber = CarNumber;
             //assert
 
@@ -108,7 +108,7 @@ namespace OperatorTaxiTests
             String ExpectedWhere = "Shevchenka, 1";
             //act
 
-            Models.Order obj = new Models.Order();
+            Order obj = new Order();
             obj.Where = Where;
             //assert
 
@@ -125,7 +125,7 @@ namespace OperatorTaxiTests
             int ExpectedPassengersAmount = 1;
             //act
 
-            Models.Order obj = new Models.Order();
+            Order obj = new Order();
             obj.PassengersAmount = PassengersAmount;
             //assert
 
@@ -137,7 +137,7 @@ namespace OperatorTaxiTests
         public void GetPassengerAmountOutOfBoundsTest()
         {
             int ExpectedPassengerAmount = 10;
-            Models.Order obj = new Models.Order();
+            Order obj = new Order();
             obj.PassengersAmount = 10;
 
             Assert.AreEqual(ExpectedPassengerAmount, obj.PassengersAmount);

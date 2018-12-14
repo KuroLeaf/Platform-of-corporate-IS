@@ -91,6 +91,7 @@
     <Compile Include="Models\OperatorContext.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Taxist.cs" />
+    <Compile Include="Repository\GenericRepository.cs" />
     <Compile Include="Repository\IGenericRepository.cs" />
     <Compile Include="TaxiView.xaml.cs">
       <DependentUpon>TaxiView.xaml</DependentUpon>
@@ -144,6 +145,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UniitOfWork\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

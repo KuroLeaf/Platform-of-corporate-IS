@@ -11,6 +11,7 @@
 
     public enum OE
     {
+        ID,
         WHERE,
         DESTINATION,
         PAS_AMOUNT,
@@ -20,6 +21,7 @@
 
     public enum TE
     {
+        ID,
         MODEL,
         NUMBER,
         IS_BUSY
@@ -101,13 +103,13 @@
             var lines1 = new string[Orders.Count];
             for (int i = 0; i < lines1.Length; ++i)
             {
-                lines1[i] = Orders[i].Where + ", " + Orders[i].Destination + ", " + Orders[i].PassengersAmount + ", " + Orders[i].Status + ", " + Orders[i].CarNumber;
+                lines1[i] = Orders[i].Id + ", " + Orders[i].Where + ", " + Orders[i].Destination + ", " + Orders[i].PassengersAmount + ", " + Orders[i].Status + ", " + Orders[i].CarNumber;
             }
             File.WriteAllLines(OrdersPath, lines1);
             var lines2 = new string[Taxists.Count];
             for (int i = 0; i < lines2.Length; ++i)
             {
-                lines2[i] = Taxists[i].Model + " " + Taxists[i].Number + " " + Taxists[i].IsBusy;
+                lines2[i] = Taxists[i].Id + ", " + Taxists[i].Model + " " + Taxists[i].Number + " " + Taxists[i].IsBusy;
             }
             File.WriteAllLines(TaxistsPath, lines2);
         }
@@ -155,6 +157,7 @@
             }
             var lines = File.ReadAllLines(OrdersPath, Encoding.UTF8);
             string[] line;
+            uint id;
             string where;
             string destination;
             int PassengersAmount;

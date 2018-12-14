@@ -13,8 +13,9 @@
 
         public Order() { }
 
-        public Order(string Where, string Destination, int PassengersAmount, status Status, string CarNumber)
+        public Order(uint id, string Where, string Destination, int PassengersAmount, status Status, string CarNumber)
         {
+            this.Id = id;
             this.Where = Where;
             this.Destination = Destination;
             this.PassengersAmount = PassengersAmount;
@@ -42,6 +43,8 @@
                 }
             }
         }
+
+        public uint Id { get; set; }
         public status Status { get; set; }
         public string CarNumber { get; set; }
     }

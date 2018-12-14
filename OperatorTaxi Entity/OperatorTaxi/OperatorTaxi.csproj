@@ -96,6 +96,8 @@
     <Compile Include="TaxiView.xaml.cs">
       <DependentUpon>TaxiView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UniitOfWork\IUnitOfWork.cs" />
+    <Compile Include="UniitOfWork\UnitOfWork.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -146,8 +148,6 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UniitOfWork\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

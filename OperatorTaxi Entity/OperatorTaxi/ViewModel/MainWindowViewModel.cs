@@ -9,6 +9,22 @@
     using System.Runtime.CompilerServices;
     using OperatorTaxi.Models;
 
+    public enum OE
+    {
+        WHERE,
+        DESTINATION,
+        PAS_AMOUNT,
+        STATUS,
+        CAR_NUMBER
+    }
+
+    public enum TE
+    {
+        MODEL,
+        NUMBER,
+        IS_BUSY
+    }
+
 
     public class MainWindowViewModel : INotifyPropertyChanged
     {
@@ -151,24 +167,24 @@
                 if (line.Length > 1)
                 {
                     carNumber = "------";
-                    where = line[0].Trim();
-                    destination = line[1].Trim();
+                    where = line[(int)OE.WHERE].Trim();
+                    destination = line[(int)OE.DESTINATION].Trim();
                     int passengersAmountToParse;
-                    if (!int.TryParse(line[2].Trim(), out passengersAmountToParse))
+                    if (!int.TryParse(line[(int)OE.PAS_AMOUNT].Trim(), out passengersAmountToParse))
                     {
                         throw new Exception("Incorrect input amount of passengers in file!");
                     }
                     PassengersAmount = passengersAmountToParse;
 
                     status statusToParse;
-                    if (!status.TryParse(line[3].Trim().ToUpper(), out statusToParse))
+                    if (!status.TryParse(line[(int)OE.STATUS].Trim().ToUpper(), out statusToParse))
                     {
                         throw new Exception("Incorrect input status in file!");
                     }
                     stat = statusToParse;
                     if (line.Length == 5 && stat == status.APPOINTED)
                     {
-                        carNumber = line[4].Trim();
+                        carNumber = line[(int)OE.CAR_NUMBER].Trim();
                     }
 
                     Orders.Add(new Order(where, destination, PassengersAmount, stat, carNumber));
@@ -190,10 +206,10 @@
                 line = lines[i].Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
                 if (line.Length > 1)
                 {
-                    carModel = line[0].Trim();
-                    number = line[1].Trim();
+                    carModel = line[(int)TE.MODEL].Trim();
+                    number = line[(int)TE.NUMBER].Trim();
                     bool isBusyToParse = false;
-                    if (!bool.TryParse(line[2].Trim(), out isBusyToParse))
+                    if (!bool.TryParse(line[(int)TE.IS_BUSY].Trim(), out isBusyToParse))
                     {
                         throw new Exception("Incorrect data about employment of taxist in file!");
                     }
